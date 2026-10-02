@@ -16,6 +16,18 @@ updates:
           - github/codeql-action
 
   - package-ecosystem: npm
+    directory: /tools/clang-format
+    schedule:
+      interval: monthly
+    cooldown:
+      semver-major-days: 5
+      semver-minor-days: 5
+      semver-patch-days: 5
+    commit-message:
+      prefix: tools
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: npm
     directory: /tools/eslint
     schedule:
       interval: monthly
